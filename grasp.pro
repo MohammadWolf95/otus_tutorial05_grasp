@@ -16,8 +16,10 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += src/main.cpp \
     src/figures.cpp \
-    src/uinterface.cpp
+    src/uinterface.cpp \
+    src/document.cpp
 
 HEADERS += \
     src/figures.h \
-    src/uinterface.h
+    src/uinterface.h \
+    src/document.h
