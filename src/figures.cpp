@@ -1,7 +1,7 @@
 #include "figures.h"
 
 //class Figure
-Figures::Figures()
+Figure::Figure()
 {
 
 }

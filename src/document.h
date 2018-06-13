@@ -1,18 +1,19 @@
-#ifndef EDITOR_H
-#define EDITOR_H
+#ifndef DOCUMENT_H
+#define DOCUMENT_H
 
 #include <string>
 #include <vector>
 #include "figures.h"
+#include <memory>
 
 using namespace std;
 
 class Document
 {
 public:
-    Document();
-    string name;
-    vector<Figures*>figures;
+    Document(string name);
+    string _name;
+    vector<shared_ptr<Figure>>figures;
 };
 
-#endif // EDITOR_H
+#endif // DOCUMENT_H

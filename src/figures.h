@@ -4,61 +4,72 @@
 
 using namespace std;
 
-class Figures
+class Figure
 {
 public:
-    Figures();
+    Figure();
     virtual int area() = 0;
+    virtual void data()=0;
 };
 
-class Rectangle:public Figures{
+class Rectangle:public Figure{
 public:
     Rectangle(int a, int b):
         width(a), height(b){
-        cout<<"Rectangle was created"<<endl;
     }
     int area() override{
         return width*height;
     }
+    void data()override{
+        cout<<"Rectangle: width = "<<width<<
+              ", height = "<<height<<endl;
+    }
 
 private:
     int width, height;
 };
 
-class Triangle:public Figures{
+class Triangle:public Figure{
 public:
     Triangle(int a, int b):
         width(a), height(b){
-        cout<<"Triangle was created"<<endl;
     }
     int area() override{
         return width*height/2;
     }
+    void data()override{
+        cout<<"Triangle: width = "<<width<<
+              ", height = "<<height<<endl;
+    }
 private:
     int width, height;
 };
 
-class Square:public Figures{
+class Square:public Figure{
 public:
     Square(int a):
         width(a){
-        cout<<"Square was created"<<endl;
     }
     int area() override{
         return width*width;
+    }
+    void data()override{
+        cout<<"Square: width = "<<width<<endl;
     }
 private:
     int width;
 };
 
-class Circle:public Figures{
+class Circle:public Figure{
 public:
     Circle(int a):
         radius(a){
-        cout<<"Circle was created"<<endl;
     }
     int area() override{
         return 2*3.14*radius*radius;
+    }
+    void data()override{
+        cout<<"Circle: radius = "<<radius<<endl;
     }
 private:
     int radius;

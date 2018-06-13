@@ -1,6 +1,6 @@
-#include "src/document.h"
+#include "document.h"
 
-Document::Document()
+Document::Document(string name)
 {
-
+    _name = name;
 }
