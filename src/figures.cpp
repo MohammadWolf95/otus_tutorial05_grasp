@@ -3,6 +3,6 @@
 //class Figure
 Figure::Figure()
 {
-
+    name.reset(new char[50]);
 }
 

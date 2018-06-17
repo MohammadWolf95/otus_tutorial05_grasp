@@ -23,11 +23,12 @@ public:
     void setModel(Model*model){
         this->model = model;
     }
-    void onLoad(string name);
-    void createFile(string name){
+    void onLoad(const char*name);
+    void createFile(const char* name){
         model->createDoc(name);
     }
-    void addFigures(string name, Figure*figure);
+    void addFigures(const char *nameDoc, const char *nameFigure, shared_ptr<Figure> figure);
+    void removeFigure(const char *nameDoc, const char *nameFigure);
 private:
     View *view;
     Model *model;

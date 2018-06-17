@@ -1,6 +1,7 @@
 #ifndef FIGURES_H
 #define FIGURES_H
 #include <iostream>
+#include <memory>
 
 using namespace std;
 
@@ -10,6 +11,7 @@ public:
     Figure();
     virtual int area() = 0;
     virtual void data()=0;
+    unique_ptr<char>name;
 };
 
 class Rectangle:public Figure{

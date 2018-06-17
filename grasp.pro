@@ -1,6 +1,7 @@
 QT -= gui
 
-CONFIG += c++11 console
+CONFIG += c++11 console\
+          c++14
 CONFIG -= app_bundle
 
 # The following define makes your compiler emit warnings if you use
@@ -17,9 +18,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += src/main.cpp \
     src/figures.cpp \
     src/uinterface.cpp \
-    src/document.cpp
+    src/model.cpp \
+    src/document.cpp \
+    src/view.cpp
 
 HEADERS += \
     src/figures.h \
     src/uinterface.h \
-    src/document.h
+    src/model.h \
+    src/document.h \
+    src/view.h

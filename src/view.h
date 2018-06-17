@@ -12,7 +12,7 @@ public:
     void setModel(Model*model){
         this->model = model;
     }
-    void render(const string&name);
+    void render(const char*name);
 private:
     Model *model;
 };

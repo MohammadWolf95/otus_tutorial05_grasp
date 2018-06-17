@@ -4,9 +4,9 @@ View::View()
 {
 }
 
-void View::render(const string&name){
+void View::render(const char*name){
     auto doc = model->open(name);
     for(auto i:doc->figures){
-        i->data();
+        i.second->data();
     }
 }
