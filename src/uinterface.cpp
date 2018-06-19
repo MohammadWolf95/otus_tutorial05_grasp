@@ -21,7 +21,7 @@ void UInterface::addFigures(const char* nameDoc, const char*nameFigure, shared_p
             throw nameFigure;
         }
         strncpy(figure->name.get(), nameFigure, sizeof(nameFigure));
-        doc->figures.emplace(std::make_pair(figure->name.get(), figure));
+        doc->figures.insert(/*std::make_pair(figure->name.get(), figure)*/map<const char*, shared_ptr<Figure>, ltstr>::value_type(nameFigure, figure));
     }
     catch(string name_error){
         cout<<"Figure with name "<<name_error<<

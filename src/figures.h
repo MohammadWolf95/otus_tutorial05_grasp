@@ -11,7 +11,7 @@ public:
     Figure();
     virtual int area() = 0;
     virtual void data()=0;
-    unique_ptr<char>name;
+    shared_ptr<char>name;
 };
 
 class Rectangle:public Figure{
