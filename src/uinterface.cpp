@@ -20,7 +20,8 @@ void UInterface::addFigures(const char* nameDoc, const char*nameFigure, shared_p
         if(it!=doc->figures.end()){
             throw nameFigure;
         }
-        strncpy(figure->name.get(), nameFigure, sizeof(nameFigure));
+
+        //strncpy(ch, nameFigure, sizeof(nameFigure)+1);
         doc->figures.insert(/*std::make_pair(figure->name.get(), figure)*/map<const char*, shared_ptr<Figure>, ltstr>::value_type(nameFigure, figure));
     }
     catch(string name_error){
@@ -38,7 +39,7 @@ void UInterface::removeFigure(const char *nameDoc, const char *nameFigure){
         char*ch;
         const char* ch1 = doc->figures.begin()->first;
         strncpy(ch, ch1, sizeof(ch1));
-        auto it = doc->figures.find(ch1);
+        auto it = doc->figures.find("circle");
         if(it==doc->figures.end()){
             throw nameFigure;
         }

@@ -19,7 +19,8 @@ int main(int argc, char *argv[])
     std::shared_ptr<Figure>figure(new Triangle(6,5));
     std::shared_ptr<Figure>circle(new Circle(6));
     uinterf.addFigures("new1", "triangle", figure);
-    uinterf.addFigures("new1", "circle", circle);
+    char ch[20]="circle";
+    uinterf.addFigures("new1", ch, circle);
     uinterf.removeFigure("new1","triangle");
     //auto doc = model.open("new1");
     //std::shared_ptr<Figure>figure(new Triangle(6,1));
