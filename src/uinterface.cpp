@@ -6,7 +6,6 @@
 
 UInterface::UInterface()
 {
-    int*b = new int(10);
 }
 
 void UInterface::onLoad(const char*name){
