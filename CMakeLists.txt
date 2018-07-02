@@ -27,7 +27,7 @@ set_target_properties(grasp_mvc PROPERTIES
 		COMPILE_OPTIONS -Wpedantic -Wall -Wextra
 )
 
-install(TARGETS graspmvc RUNTIME DESTINATION bin)
+install(TARGETS grasp_mvc RUNTIME DESTINATION bin)
 
 set(CPACK_GENERATOR DEB)
 
