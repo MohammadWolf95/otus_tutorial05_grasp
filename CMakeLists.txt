@@ -6,7 +6,7 @@ set(SOURCE_PATH "${PROJECT_SOURCE_DIR}/src")
 
 set(TEST_PATH "${PROJECT_TEST_DIR}/test")
 
-find_package(Boost COMPONENTS unit_framework REQUIRED)
+find_package(Boost COMPONENTS unit_test_framework REQUIRED)
 
 configure_file(version.h.in version.h)
 
