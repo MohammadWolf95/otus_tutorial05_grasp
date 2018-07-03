@@ -39,6 +39,6 @@ set(CPACK_PACKAGE_CONTACT abdulvadudovmagomed@mail.ru)
 
 include(CPack)
 
-#enable_testing()
+enable_testing()
 
-#add_subdirectory(test)
+add_subdirectory(test)
